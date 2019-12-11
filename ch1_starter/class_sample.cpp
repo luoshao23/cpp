@@ -12,7 +12,7 @@ int main()
 		cout << item1 << endl;
 		cout << item2 << endl;
 	}
-	cout << book << endl;
+	// cout << book << endl;
 
 	return 0;
 }
