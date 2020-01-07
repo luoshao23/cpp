@@ -1,0 +1,1159 @@
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3932:17: error: no matching function for call to 'swap'
+                swap(*__first, *__last);
+                ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4117:5: note: in instantiation of function template specialization 'std::__1::__sort<std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > &, const std::__1::basic_string<char> *>' requested here
+    __sort<_Comp_ref>(__first, __last, __comp);
+    ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4126:12: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> *, std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > >' requested here
+    _VSTD::sort(__first, __last, __less<typename iterator_traits<_RandomAccessIterator>::value_type>());
+           ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4142:12: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> *>' requested here
+    _VSTD::sort(__first.base(), __last.base());
+           ^
+elim_dups.cc:9:2: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> >' requested here
+        sort(words.cbegin(), words.cend());
+        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3998:33: error: no matching function for call to 'swap'
+                                swap(*__i, *__j);
+                                ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4017:25: error: no matching function for call to 'swap'
+                        swap(*__i, *__j);
+                        ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4029:21: error: no matching function for call to 'swap'
+                    swap(*__i, *__j);
+                    ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4053:17: error: no matching function for call to 'swap'
+                swap(*__i, *__j);
+                ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4065:13: error: no matching function for call to 'swap'
+            swap(*__i, *__m);
+            ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3686:9: error: no matching function for call to 'swap'
+        swap(*__y, *__z);          // x <= z && y < z
+        ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3935:20: note: in instantiation of function template specialization 'std::__1::__sort3<std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > &, const std::__1::basic_string<char> *>' requested here
+            _VSTD::__sort3<_Compare>(__first, __first+1, --__last, __comp);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4117:5: note: in instantiation of function template specialization 'std::__1::__sort<std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > &, const std::__1::basic_string<char> *>' requested here
+    __sort<_Comp_ref>(__first, __last, __comp);
+    ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4126:12: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> *, std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > >' requested here
+    _VSTD::sort(__first, __last, __less<typename iterator_traits<_RandomAccessIterator>::value_type>());
+           ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4142:12: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> *>' requested here
+    _VSTD::sort(__first.base(), __last.base());
+           ^
+elim_dups.cc:9:2: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> >' requested here
+        sort(words.cbegin(), words.cend());
+        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3690:13: error: no matching function for call to 'swap'
+            swap(*__x, *__y);      // x < y && y <= z
+            ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3697:9: error: no matching function for call to 'swap'
+        swap(*__x, *__z);          // x < y && y < z
+        ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3701:5: error: no matching function for call to 'swap'
+    swap(*__x, *__y);              // x > y && y <= z
+    ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3705:9: error: no matching function for call to 'swap'
+        swap(*__y, *__z);          // x <= y && y < z
+        ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3718:20: error: no matching function for call to '__sort3'
+    unsigned __r = __sort3<_Compare>(__x1, __x2, __x3, __c);
+                   ^~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3938:20: note: in instantiation of function template specialization 'std::__1::__sort4<std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > &, const std::__1::basic_string<char> *>' requested here
+            _VSTD::__sort4<_Compare>(__first, __first+1, __first+2, --__last, __comp);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4117:5: note: in instantiation of function template specialization 'std::__1::__sort<std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > &, const std::__1::basic_string<char> *>' requested here
+    __sort<_Comp_ref>(__first, __last, __comp);
+    ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4126:12: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> *, std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > >' requested here
+    _VSTD::sort(__first, __last, __less<typename iterator_traits<_RandomAccessIterator>::value_type>());
+           ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4142:12: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> *>' requested here
+    _VSTD::sort(__first.base(), __last.base());
+           ^
+elim_dups.cc:9:2: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> >' requested here
+        sort(words.cbegin(), words.cend());
+        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3678:1: note: candidate template ignored: substitution failure [with _Compare = std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > &, _ForwardIterator = const std::__1::basic_string<char> *]
+__sort3(_ForwardIterator __x, _ForwardIterator __y, _ForwardIterator __z, _Compare __c)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3721:9: error: no matching function for call to 'swap'
+        swap(*__x3, *__x4);
+        ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3725:13: error: no matching function for call to 'swap'
+            swap(*__x2, *__x3);
+            ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3729:17: error: no matching function for call to 'swap'
+                swap(*__x1, *__x2);
+                ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3744:20: error: no matching function for call to '__sort4'
+    unsigned __r = __sort4<_Compare>(__x1, __x2, __x3, __x4, __c);
+                   ^~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3941:20: note: in instantiation of function template specialization 'std::__1::__sort5<std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > &, const std::__1::basic_string<char> *>' requested here
+            _VSTD::__sort5<_Compare>(__first, __first+1, __first+2, __first+3, --__last, __comp);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4117:5: note: in instantiation of function template specialization 'std::__1::__sort<std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > &, const std::__1::basic_string<char> *>' requested here
+    __sort<_Comp_ref>(__first, __last, __comp);
+    ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4126:12: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> *, std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > >' requested here
+    _VSTD::sort(__first, __last, __less<typename iterator_traits<_RandomAccessIterator>::value_type>());
+           ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:4142:12: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> *>' requested here
+    _VSTD::sort(__first.base(), __last.base());
+           ^
+elim_dups.cc:9:2: note: in instantiation of function template specialization 'std::__1::sort<const std::__1::basic_string<char> >' requested here
+        sort(words.cbegin(), words.cend());
+        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3715:1: note: candidate template ignored: substitution failure [with _Compare = std::__1::__less<std::__1::basic_string<char>, std::__1::basic_string<char> > &, _ForwardIterator = const std::__1::basic_string<char> *]
+__sort4(_ForwardIterator __x1, _ForwardIterator __x2, _ForwardIterator __x3,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3747:9: error: no matching function for call to 'swap'
+        swap(*__x4, *__x5);
+        ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3751:13: error: no matching function for call to 'swap'
+            swap(*__x3, *__x4);
+            ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+In file included from elim_dups.cc:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:38:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:216:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:15:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:500:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:176:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:56:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:3755:17: error: no matching function for call to 'swap'
+                swap(*__x2, *__x3);
+                ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:4501:1: note: candidate template ignored: requirement 'is_move_assignable<const basic_string<char> >::value' was not satisfied [with _Tp = const std::__1::basic_string<char>]
+swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:270:1: note: candidate template ignored: could not match '_Tp [_Np]' against 'const std::__1::basic_string<char>'
+swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:631:1: note: candidate template ignored: could not match 'pair' against 'basic_string'
+swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:163:6: note: candidate template ignored: could not match '__tuple_leaf' against 'basic_string'
+void swap(__tuple_leaf<_Ip, _Hp, _Ep>& __x, __tuple_leaf<_Ip, _Hp, _Ep>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:944:1: note: candidate template ignored: could not match 'tuple' against 'basic_string'
+swap(tuple<_Tp...>& __t, tuple<_Tp...>& __u)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2307:6: note: candidate template ignored: could not match '__compressed_pair' against 'basic_string'
+void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2955:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
+swap(unique_ptr<_Tp, _Dp>& __x, unique_ptr<_Tp, _Dp>& __y) _NOEXCEPT {__x.swap(__y);}
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:4942:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_string'
+swap(shared_ptr<_Tp>& __x, shared_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5241:1: note: candidate template ignored: could not match 'weak_ptr' against 'basic_string'
+swap(weak_ptr<_Tp>& __x, weak_ptr<_Tp>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:1972:1: note: candidate template ignored: could not match 'function' against 'basic_string'
+swap(function<_Rp(_ArgTypes...)>& __x, function<_Rp(_ArgTypes...)>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4117:1: note: candidate template ignored: deduced type 'basic_string<...>' of 1st parameter does not match adjusted type 'const basic_string<...>' of argument [with _CharT = char, _Traits = std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>]
+swap(basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:277:1: note: candidate template ignored: could not match 'unique_lock' against 'basic_string'
+swap(unique_lock<_Mutex>& __x, unique_lock<_Mutex>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:86:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:96:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, __bit_reference<_Dp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:106:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(__bit_reference<_Cp> __x, bool& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:116:1: note: candidate template ignored: could not match '__bit_reference' against 'basic_string'
+swap(bool& __x, __bit_reference<_Cp> __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:627:1: note: candidate template ignored: could not match '__split_buffer' against 'basic_string'
+swap(__split_buffer<_Tp, _Allocator>& __x, __split_buffer<_Tp, _Allocator>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:3389:1: note: candidate template ignored: could not match 'vector' against 'basic_string'
+swap(vector<_Tp, _Allocator>& __x, vector<_Tp, _Allocator>& __y)
+^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
