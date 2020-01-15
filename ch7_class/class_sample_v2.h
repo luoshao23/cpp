@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <vector>
 
 class Screen {
@@ -9,6 +10,7 @@ public:
 	Screen(pos ht, pos wd, char c): height(ht), width(wd), contents(ht * wd, c) {}
 	char get() const
 		{ return contents[cursor]; }
+	pos size() const;
 	inline char get(pos ht, pos wd) const;
 	Screen &move(pos r, pos c);
 	Screen &set(char);
@@ -21,7 +23,7 @@ private:
 	pos cursor = 0;
 	pos height = 0, width = 0;
 	std::string contents;
-	void do_display(std::ostream &os) const {os << contents;}
+	void do_display(std::ostream &os) const; // {os << contents;}
 };
 
 class Window_mgr {
@@ -36,7 +38,7 @@ private:
 void Window_mgr::clear(ScreenIndex i)
 {
 	Screen &s = screens[i];
-	s.contents = string(s.height * s.width, ' ');
+	s.contents = std::string(s.height * s.width, ' ');
 }
 
 class Link_screen {
